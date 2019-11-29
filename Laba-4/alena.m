@@ -1,8 +1,8 @@
-str='195251 СПб Политехническая 29';
-disp('Оригинальная строка =');
+п»їstr='195251 РЎРџР± РџРѕР»РёС‚РµС…РЅРёС‡РµСЃРєР°СЏ 29';
+disp('РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ СЃС‚СЂРѕРєР° =');
 disp([' "' str '"']); disp(' ');
 spacePoz = findstr(str, ' ');
-disp('Длина строки без пробелов =');
+disp('Р”Р»РёРЅР° СЃС‚СЂРѕРєРё Р±РµР· РїСЂРѕР±РµР»РѕРІ =');
 disp(length(str) - length(findstr(str, ' ')));
 
 word1 = str(1:spacePoz(1)-1); 
@@ -16,25 +16,25 @@ while i < length(numStr)
     i = i + 1;
     switch numStr(i)
         case '0'
-            numStr = [numStr(1:i-1) 'ноль' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РЅРѕР»СЊ' numStr(i+1:end)];
         case '1'
-            numStr = [numStr(1:i-1) 'один' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РѕРґРёРЅ' numStr(i+1:end)];
         case '2'
-            numStr = [numStr(1:i-1) 'два' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РґРІР°' numStr(i+1:end)];
         case '3'
-            numStr = [numStr(1:i-1) 'три' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'С‚СЂРё' numStr(i+1:end)];
         case '4'
-            numStr = [numStr(1:i-1) 'четыри' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'С‡РµС‚С‹СЂРё' numStr(i+1:end)];
         case '5'
-            numStr = [numStr(1:i-1) 'пять' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РїСЏС‚СЊ' numStr(i+1:end)];
         case '6'
-            numStr = [numStr(1:i-1) 'шесть' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'С€РµСЃС‚СЊ' numStr(i+1:end)];
         case '7'
-            numStr = [numStr(1:i-1) 'семь' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'СЃРµРјСЊ' numStr(i+1:end)];
         case '8'
-            numStr = [numStr(1:i-1) 'восемь' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РІРѕСЃРµРјСЊ' numStr(i+1:end)];
         case '9'
-            numStr = [numStr(1:i-1) 'девять' numStr(i+1:end)];
+            numStr = [numStr(1:i-1) 'РґРµРІСЏС‚СЊ' numStr(i+1:end)];
     end
 end
 numStr
@@ -61,12 +61,12 @@ end
 numArray
 
 f=fopen('in5.txt','wt');
-fprintf(f,'195251 СПб Политехническая 29\n1 2 3 4 100\n6 7 8 9 0.1 0.2 0.3 0.4 200\n0.5 0.6 0.7 0.8 300');
+fprintf(f,'195251 РЎРџР± РџРѕР»РёС‚РµС…РЅРёС‡РµСЃРєР°СЏ 29\n1 2 3 4 100\n6 7 8 9 0.1 0.2 0.3 0.4 200\n0.5 0.6 0.7 0.8 300');
 fclose(f);
-disp('in5.txt файл сгенирирован.'); disp(' ');
+disp('in5.txt С„Р°Р№Р» СЃРіРµРЅРёСЂРёСЂРѕРІР°РЅ.'); disp(' ');
 
 f=fopen('in5.txt','rt');
-fileStr=fgetl(f); %Строка 1
+fileStr=fgetl(f); %РЎС‚СЂРѕРєР° 1
 fileVector1 = 0;
 fileMatrix1 = 0; fileMatrix2 = 0; fileMatrix3 = 0;
 i1 = 1; i2 = 1; i3 = 1; i4 = 1;
@@ -120,7 +120,7 @@ if tf
         i4 = i4 + 1;
     end
 end
-fileStr=fgetl(f); %Строка 2
+fileStr=fgetl(f); %РЎС‚СЂРѕРєР° 2
 spacePoz = findstr(fileStr, ' ');
 i = 1;
 [a5, tf] = str2num(fileStr(1:spacePoz(1)-1));
@@ -173,7 +173,7 @@ if tf
         i4 = i4 + 1;
     end
 end
-fileStr=fgetl(f); %Строка 3
+fileStr=fgetl(f); %РЎС‚СЂРѕРєР° 3
 spacePoz = findstr(fileStr, ' ');
 i2 = 1;
 [a5, tf] = str2num(fileStr(1:spacePoz(1)-1));
@@ -226,7 +226,7 @@ if tf
         i4 = i4 + 1;
     end
 end
-fileStr=fgetl(f); %Строка 4
+fileStr=fgetl(f); %РЎС‚СЂРѕРєР° 4
 spacePoz = findstr(fileStr, ' ');
 i3 = 1;
 [a5, tf] = str2num(fileStr(1:spacePoz(1)-1));
@@ -290,7 +290,7 @@ FileHtml=fopen(['lab3_5.html'],'wt');
 fprintf(FileHtml,['<!doctype html>\n']);
 fprintf(FileHtml,['<HTML lang="ru">\n']);
 fprintf(FileHtml,['<head>\n']);
-fprintf(FileHtml,['<title>Отчет по лабораторной работе \n']);
+fprintf(FileHtml,['<title>РћС‚С‡РµС‚ РїРѕ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕР№ СЂР°Р±РѕС‚Рµ \n']);
 fprintf(FileHtml,['</title>\n']);
 fprintf(FileHtml,['<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">']);
 fprintf(FileHtml,['<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">\n']);
@@ -298,19 +298,19 @@ fprintf(FileHtml,['<link rel="stylesheet" href="https://stackpath.bootstrapcdn.c
 fprintf(FileHtml,['</head>\n']);
 fprintf(FileHtml,['<body>\n']);
 fprintf(FileHtml,['<div class="container text-center">\n']);
-fprintf(FileHtml,['<H3>ОТЧЕТ<br>по лабораторной работе</h3>\n']);
-fprintf(FileHtml,['<br><br><h5>Исходные данные</h5>\n']);
-fprintf(FileHtml,'y = sin(5*x)<br> x - вектор от 1 до 5 с шагом 0.01');
+fprintf(FileHtml,['<H3>РћРўР§Р•Рў<br>РїРѕ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅРѕР№ СЂР°Р±РѕС‚Рµ</h3>\n']);
+fprintf(FileHtml,['<br><br><h5>РСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ</h5>\n']);
+fprintf(FileHtml,'y = sin(5*x)<br> x - РІРµРєС‚РѕСЂ РѕС‚ 1 РґРѕ 5 СЃ С€Р°РіРѕРј 0.01');
 h1=figure('Name','var5.svg y = sin(5*x)');
 hold on
 x = [1:0.01:5];
 y = sin(5*x);
 plot(x,y, '-k');
 hold off;
-xlabel('X ось');
-ylabel('Y ось');
+xlabel('X РѕСЃСЊ');
+ylabel('Y РѕСЃСЊ');
 saveas(h1,'var5', 'svg');
-fprintf(FileHtml,['<br><br><div class="font-italic"> График </div>\n']);
+fprintf(FileHtml,['<br><br><div class="font-italic"> Р“СЂР°С„РёРє </div>\n']);
 fprintf(FileHtml,['<a href="var5.svg" class="rounded mx-auto d-block img-fluid">']);
 fprintf(FileHtml,['<br><img src="var5.svg" class="img-fluid" >' '\n']);
 fprintf(FileHtml,['</a>\n']);
@@ -318,4 +318,4 @@ fprintf(FileHtml,['</div>\n']);
 fprintf(FileHtml,['</body>\n']);
 fprintf(FileHtml,['</HTML>\n']);
 fclose(FileHtml);
-disp('HTML отчет сгенирирован.');
+disp('HTML РѕС‚С‡РµС‚ СЃРіРµРЅРёСЂРёСЂРѕРІР°РЅ.');
